@@ -1,0 +1,449 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Frame® — produtora de conteúdo estratégico. Portfólio.">
+<meta property="og:title" content="Frame® Portfólio">
+<meta property="og:description" content="Conteúdo estratégico para quem faz um trabalho bom e precisa que ele seja visto.">
+<meta property="og:image" content="media/nuc_4.jpg">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}[hidden]{display:none!important}</style>
+<title>Frame® Portfólio</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500&family=Roboto+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a film reel read top to bottom — dark "projection" bands for the work, paper bands for the talk, every section stamped with a timecode like a slate. */
+:root{
+  --preto:#141414; --grafite:#1E1E1E; --grafite2:#2A2A2A;
+  --papel:#ECEAE5; --pedra:#DEDBD4; --tinta:#5A5751; --linha:#3A3936;
+  --rec:#FF3B1F;
+  --display:"Inter Tight", "Helvetica Neue", Arial, sans-serif;
+  --mono:"Roboto Mono", "SFMono-Regular", Consolas, monospace;
+  --gut:max(16px, env(safe-area-inset-left, 0px));
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--preto);color:var(--papel);font-family:var(--display);font-size:17px;line-height:1.5;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--preto)}
+body::after{content:"";position:fixed;inset:-50%;z-index:90;pointer-events:none;background:url(media/grain.png);opacity:.11;mix-blend-mode:overlay;animation:grain 1s steps(6) infinite}
+@keyframes grain{0%{transform:translate(0,0)}20%{transform:translate(-3%,2%)}40%{transform:translate(2%,-4%)}60%{transform:translate(-4%,-1%)}80%{transform:translate(3%,3%)}100%{transform:translate(0,0)}}
+img,video{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--rec);outline-offset:3px}
+.wrap{max-width:1320px;margin:0 auto;padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px))}
+.mono{font-family:var(--mono);font-size:12.5px;letter-spacing:.14em;text-transform:uppercase}
+.dot{display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--rec);flex:none}
+.blink{animation:blink 1.2s steps(2,start) infinite}
+@keyframes blink{to{visibility:hidden}}
+h1,h2,h3{margin:0;font-weight:800;letter-spacing:-.045em;line-height:.95;text-wrap:balance}
+p{margin:0}
+
+/* ---------- header ---------- */
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:rgba(20,20,20,.86);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--linha)}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-block:14px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.brand svg{height:22px;width:auto;color:var(--papel)}
+nav.links{display:flex;gap:26px}
+nav.links a{text-decoration:none;color:#BDBAB3;transition:color .2s}
+nav.links a:hover{color:var(--papel)}
+.tc{display:flex;align-items:center;gap:8px;color:#BDBAB3;font-variant-numeric:tabular-nums}
+@media (max-width:860px){nav.links{display:none}}
+
+/* ---------- hero ---------- */
+.hero{position:relative;padding-block:clamp(56px,9vw,120px) clamp(40px,6vw,72px);overflow:hidden}
+.vf{position:relative;padding:clamp(28px,5vw,64px) clamp(18px,4vw,56px)}
+.vf i{position:absolute;width:34px;height:34px;border:2px solid var(--papel);opacity:.0;animation:corner .6s cubic-bezier(.2,.7,.2,1) forwards}
+.vf i:nth-child(1){left:0;top:0;border-right:0;border-bottom:0}
+.vf i:nth-child(2){right:0;top:0;border-left:0;border-bottom:0}
+.vf i:nth-child(3){left:0;bottom:0;border-right:0;border-top:0}
+.vf i:nth-child(4){right:0;bottom:0;border-left:0;border-top:0}
+@keyframes corner{from{opacity:0;transform:scale(1.6)}to{opacity:.9;transform:scale(1)}}
+.vf .meta{position:absolute;left:clamp(18px,4vw,56px);right:clamp(18px,4vw,56px);display:flex;justify-content:space-between;gap:12px;color:#9A978F}
+.vf .meta.t{top:14px}.vf .meta.b{bottom:14px}
+.logo-anim{width:100%;height:auto;color:var(--papel);overflow:visible;margin-block:clamp(26px,4vw,48px)}
+.logo-anim .ltr{transform:translateY(780px);animation:rise .9s cubic-bezier(.16,.84,.24,1) forwards}
+.logo-anim .reg{opacity:0;transform-box:fill-box;transform-origin:center;animation:pop .5s cubic-bezier(.2,.9,.3,1.2) forwards;animation-delay:1.05s}
+@keyframes rise{to{transform:translateY(0)}}
+@keyframes pop{from{opacity:0;transform:scale(.3) rotate(-30deg)}to{opacity:1;transform:scale(1) rotate(0)}}
+.logo-anim.replay .ltr,.logo-anim.replay .reg{animation:none}
+.hero-row{display:grid;grid-template-columns:1fr auto;gap:40px;align-items:end;margin-top:8px}
+.hero-row p.lede{font-size:clamp(22px,2.6vw,34px);font-weight:500;line-height:1.18;letter-spacing:-.02em;max-width:22ch;opacity:0;animation:fadeup .8s ease forwards;animation-delay:1.4s}
+.hero-row .cta{opacity:0;animation:fadeup .8s ease forwards;animation-delay:1.6s}
+@keyframes fadeup{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.btn{display:inline-flex;align-items:center;gap:12px;padding:16px 22px;border:1.5px solid var(--papel);text-decoration:none;font-weight:600;font-size:16px;transition:background .2s,color .2s;background:transparent;color:inherit;cursor:pointer;font-family:var(--display)}
+.btn:hover{background:var(--papel);color:var(--preto)}
+@media (max-width:720px){.hero-row{grid-template-columns:1fr}}
+
+/* film strip */
+.strip{position:relative;border-block:1px solid var(--linha);background:#0D0D0D;overflow:hidden;padding-block:14px}
+.strip::before,.strip::after{content:"";position:absolute;left:0;right:0;height:8px;background:repeating-linear-gradient(90deg,transparent 0 14px,#2b2a28 14px 24px);z-index:2}
+.strip::before{top:3px}.strip::after{bottom:3px}
+.reel{display:flex;gap:6px;width:max-content;animation:reel 70s linear infinite}
+.reel img{height:150px;width:auto;filter:saturate(.95)}
+.strip:hover .reel{animation-play-state:paused}
+@keyframes reel{to{transform:translateX(-50%)}}
+@media (max-width:600px){.reel img{height:104px}}
+
+/* ---------- sections ---------- */
+section.band{padding-block:clamp(72px,10vw,140px)}
+.paper{background:var(--papel);color:var(--preto)}
+.stone{background:var(--pedra);color:var(--preto)}
+.paper .mono,.stone .mono{color:var(--tinta)}
+.slate{display:flex;align-items:center;gap:14px;margin-bottom:28px;color:#9A978F}
+.slate .bar{flex:1;height:1px;background:currentColor;opacity:.35}
+h2.big{font-size:clamp(44px,7.2vw,104px)}
+
+/* conheça */
+.about{display:grid;grid-template-columns:1.25fr 1fr;gap:clamp(40px,6vw,96px);align-items:start}
+.about .copy{display:flex;flex-direction:column;gap:22px;min-width:0}
+.about .copy p{font-size:clamp(18px,1.5vw,21px);max-width:58ch;color:#33322F}
+.cell{border:3px solid var(--preto);aspect-ratio:1;max-width:420px;width:100%;color:var(--preto);position:relative}
+.cell svg{width:100%;height:100%;display:block}
+.cell-cap{margin-top:16px;max-width:420px;color:var(--tinta);font-size:15px}
+.pillars{margin-top:clamp(56px,7vw,96px);display:grid;grid-template-columns:repeat(3,1fr);border-top:2px solid var(--preto)}
+.pillars > div{padding:28px 28px 8px 0;display:flex;flex-direction:column;gap:12px;min-width:0}
+.pillars > div + div{padding-left:28px;border-left:1px solid #BDBAB3}
+.pillars h3{font-size:32px;letter-spacing:-.035em}
+.pillars p{color:#4A4843}
+@media (max-width:900px){.about{grid-template-columns:1fr}.pillars{grid-template-columns:1fr}.pillars > div + div{padding-left:0;border-left:0;border-top:1px solid #BDBAB3}}
+
+/* dores */
+.pains{margin-top:56px;display:grid;grid-template-columns:repeat(2,1fr);gap:0;border-top:2px solid var(--preto)}
+.pain{display:grid;grid-template-columns:auto 1fr;gap:18px 22px;padding:30px 28px 34px 0;border-bottom:1px solid #B9B5AC;min-width:0}
+.pain:nth-child(odd){border-right:1px solid #B9B5AC}
+.pain:nth-child(even){padding-left:28px}
+.pain .n{font-family:var(--mono);font-size:13px;color:var(--tinta);padding-top:8px}
+.pain q{display:block;font-size:clamp(22px,2.1vw,28px);font-weight:700;letter-spacing:-.025em;line-height:1.12;quotes:"“" "”"}
+.pain .fix{grid-column:2;display:flex;gap:12px;align-items:baseline;color:#3B3A36}
+.pain .fix .dot{transform:translateY(-1px)}
+@media (max-width:820px){.pains{grid-template-columns:1fr}.pain:nth-child(odd){border-right:0}.pain:nth-child(even){padding-left:0}}
+
+/* portfolio */
+.work-intro{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:end}
+.work-intro p{color:#BDBAB3;font-size:19px;max-width:46ch}
+@media (max-width:820px){.work-intro{grid-template-columns:1fr}}
+.case{margin-top:clamp(72px,9vw,120px);border-top:1px solid var(--linha);padding-top:28px}
+.case-head{display:grid;grid-template-columns:auto 1fr auto;gap:28px;align-items:start;margin-bottom:32px}
+.case-no{font-family:var(--mono);font-size:13px;color:#9A978F;padding-top:10px}
+.case-head h3{font-size:clamp(34px,4.4vw,64px)}
+.case-head h3 em{font-style:italic;font-weight:500;color:#BDBAB3}
+.case-head .sub{margin-top:14px;color:#BDBAB3;font-size:18px;max-width:60ch}
+.case-spec{display:grid;grid-template-columns:auto auto;gap:6px 18px;font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#9A978F;white-space:nowrap}
+.case-spec b{color:var(--papel);font-weight:500}
+@media (max-width:900px){.case-head{grid-template-columns:1fr}.case-no{padding-top:0}.case-spec{white-space:normal}}
+.screen{position:relative;background:#000;border:1px solid var(--linha)}
+.screen video{width:100%;height:auto;background:#000}
+.screen .rec{position:absolute;left:14px;top:12px;display:flex;align-items:center;gap:8px;color:var(--papel);pointer-events:none;text-shadow:0 1px 6px rgba(0,0,0,.6);opacity:0;transition:opacity .2s}
+.screen.playing .rec{opacity:1}
+.frames{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;margin-top:8px}
+.frames button{all:unset;cursor:pointer;position:relative;display:block;min-width:0}
+.frames button img{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;filter:grayscale(.15) brightness(.86);transition:filter .25s}
+.frames button:hover img,.frames button.on img{filter:none}
+.frames button span{position:absolute;left:6px;bottom:5px;font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;color:var(--papel);text-shadow:0 1px 4px #000}
+.frames button.on::after{content:"";position:absolute;inset:0;border:2px solid var(--rec)}
+.frames button:focus-visible{outline:2px solid var(--rec);outline-offset:2px}
+@media (max-width:720px){.frames{grid-template-columns:repeat(3,1fr)}}
+.case.vertical .layout{display:grid;grid-template-columns:minmax(0,400px) 1fr;gap:clamp(24px,4vw,56px);align-items:start}
+.case.vertical .frames{grid-template-columns:repeat(3,1fr);margin-top:0;gap:10px}
+.case.vertical .frames button img{aspect-ratio:9/16}
+.case.vertical .side{display:flex;flex-direction:column;gap:22px;min-width:0}
+@media (max-width:820px){.case.vertical .layout{grid-template-columns:1fr}.case.vertical .screen{max-width:400px}}
+.did{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.did span{font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;border:1px solid var(--linha);padding:7px 10px;color:#BDBAB3}
+.stat{display:flex;align-items:baseline;gap:14px;margin-top:22px}
+.stat b{font-size:clamp(44px,5vw,68px);font-weight:800;letter-spacing:-.05em;line-height:1}
+.stat span{color:#BDBAB3;max-width:22ch}
+.hint{margin-top:10px;color:#77746D}
+
+/* processo */
+.steps{margin-top:56px;display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.step{background:var(--papel);padding:30px 26px 34px;display:flex;flex-direction:column;gap:14px;min-width:0}
+.step:last-child{background:var(--preto);color:var(--papel)}
+.step .mono{color:var(--tinta)}
+.step:last-child .mono{color:#9A978F}
+.step h3{font-size:30px;letter-spacing:-.035em}
+.step p{color:#4A4843}
+.step:last-child p{color:#BDBAB3}
+@media (max-width:980px){.steps{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:560px){.steps{grid-template-columns:1fr}}
+
+/* contato */
+.close{position:relative;overflow:hidden}
+.close-grid{display:grid;grid-template-columns:1fr auto;gap:56px;align-items:end}
+.close h2{font-size:clamp(48px,8vw,124px)}
+.contacts{margin-top:44px;display:flex;flex-direction:column;border-top:1px solid var(--linha);max-width:720px}
+.contacts .row{display:grid;grid-template-columns:120px 1fr auto;gap:16px;align-items:center;padding-block:16px;border-bottom:1px solid var(--linha)}
+.contacts .row .v{font-size:20px;font-weight:600;user-select:all;min-width:0;overflow-wrap:anywhere}
+.copybtn{all:unset;cursor:pointer;font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:#9A978F;padding:6px 8px;border:1px solid var(--linha)}
+.copybtn:hover{color:var(--papel);border-color:var(--papel)}
+.close .symbol{width:clamp(160px,18vw,240px);color:var(--papel)}
+@media (max-width:820px){.close-grid{grid-template-columns:1fr}.contacts .row{grid-template-columns:1fr auto}.contacts .row .k{grid-column:1/-1}}
+footer{border-top:1px solid var(--linha);padding-block:26px;color:#77746D}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+
+@media (prefers-reduced-motion:reduce){
+  body::after{animation:none}
+  .reel{animation:none}
+  .logo-anim .ltr{animation:none;transform:none}
+  .logo-anim .reg,.hero-row p.lede,.hero-row .cta{animation:none;opacity:1}
+  .vf i{animation:none;opacity:.9}
+  .blink{animation:none}
+  html{scroll-behavior:auto}
+}
+</style>
+
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#inicio" aria-label="Frame® — início"><svg id="wmSmall" viewBox="0 0 2911.1 737.7" aria-hidden="true"></svg></a>
+    <nav class="links mono" aria-label="Seções">
+      <a href="#conheca">Conheça</a>
+      <a href="#dores">Dores</a>
+      <a href="#portfolio">Portfólio</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <div class="tc mono" aria-hidden="true"><span class="dot blink"></span><span id="tc">00:00:00:00</span></div>
+  </div>
+</header>
+
+<main id="inicio">
+  <section class="hero">
+    <div class="wrap">
+      <div class="vf" id="vf">
+        <i></i><i></i><i></i><i></i>
+        <div class="meta t mono"><span>Produtora de conteúdo estratégico</span><span>Fr · 87</span></div>
+        <svg class="logo-anim" id="logoAnim" viewBox="0 0 2911.1 737.7" role="img" aria-label="Frame®"></svg>
+        <div class="meta b mono"><span>4K · 24 fps · 9:16 · 16:9</span><span>Estratégia · Produção · Distribuição</span></div>
+      </div>
+      <div class="hero-row">
+        <p class="lede">Conteúdo estratégico para quem faz um trabalho bom e precisa que ele seja visto.</p>
+        <div class="cta"><a class="btn" href="#portfolio">Ver os trabalhos <span aria-hidden="true">↓</span></a></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="strip" aria-label="Frames dos trabalhos">
+    <div class="reel" id="reel"></div>
+  </div>
+
+  <section class="band paper" id="conheca">
+    <div class="wrap">
+      <div class="slate mono"><span>Conheça a Frame</span><span class="bar"></span><span>TC 00:00:01:00</span></div>
+      <div class="about">
+        <div class="copy">
+          <h2 class="big">A gente enquadra o que você já faz bem.</h2>
+          <p>A Frame® é uma produtora de conteúdo estratégico. Trabalhamos com médicos, clínicas, marcas e líderes que entregam um trabalho excelente, mas não conseguem mostrar isso com a mesma qualidade nas redes.</p>
+          <p>Pensamos no objetivo antes de ligar a câmera. Cada vídeo tem uma função: atrair, gerar confiança ou trazer o cliente até a sua porta.</p>
+        </div>
+        <div>
+          <div class="cell" id="cell" aria-label="Símbolo Fr 87"></div>
+          <p class="cell-cap">Fr é o frâncio, elemento 87 da tabela periódica, um dos mais raros da natureza. Sua meia-vida é de 22 minutos. Momentos também são raros e passam rápido. A gente registra.</p>
+        </div>
+      </div>
+      <div class="pillars">
+        <div><span class="mono">Pensar</span><h3>Estratégia</h3><p>Posicionamento, pauta e roteiro com objetivo claro para cada peça.</p></div>
+        <div><span class="mono">Gravar</span><h3>Produção</h3><p>Direção, luz, som e cor de cinema, em diárias concentradas que respeitam a sua agenda.</p></div>
+        <div><span class="mono">Entregar</span><h3>Distribuição</h3><p>Edição, legendas e calendário prontos para postar, com o caminho até o seu WhatsApp.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band stone" id="dores">
+    <div class="wrap">
+      <div class="slate mono"><span>Quais dores resolvemos</span><span class="bar"></span><span>TC 00:00:02:00</span></div>
+      <h2 class="big">O que a gente ouve antes de começar.</h2>
+      <div class="pains">
+        <div class="pain"><span class="n">D.01</span><q>Eu posto, mas ninguém agenda.</q><p class="fix"><span class="dot"></span>Cada conteúdo ganha uma função e um caminho claro até a conversa no WhatsApp.</p></div>
+        <div class="pain"><span class="n">D.02</span><q>Não tenho tempo para gravar.</q><p class="fix"><span class="dot"></span>Uma diária bem planejada rende semanas de conteúdo. Você grava, a gente cuida do resto.</p></div>
+        <div class="pain"><span class="n">D.03</span><q>Meu trabalho é bom, mas o vídeo não mostra.</q><p class="fix"><span class="dot"></span>Direção, luz e cor de cinema para a imagem estar à altura do que você entrega.</p></div>
+        <div class="pain"><span class="n">D.04</span><q>Cada post parece de uma marca diferente.</q><p class="fix"><span class="dot"></span>Um padrão visual e de edição só seu, repetido até virar reconhecimento.</p></div>
+        <div class="pain"><span class="n">D.05</span><q>Não sei o que falar na frente da câmera.</q><p class="fix"><span class="dot"></span>Pauta e roteiro prontos, escritos a partir do que os seus clientes perguntam.</p></div>
+        <div class="pain"><span class="n">D.06</span><q>Já contratei e fiquei sem entrega.</q><p class="fix"><span class="dot"></span>Processo com etapas, prazos e aprovação em cada passo. Você sabe o que vem e quando.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="portfolio">
+    <div class="wrap">
+      <div class="slate mono"><span>Portfólio</span><span class="bar"></span><span>TC 00:00:03:00</span></div>
+      <div class="work-intro">
+        <h2 class="big">Frame a frame.</h2>
+        <p>Quatro trabalhos, do institucional ao reel. Toque em um frame para pular até ele, ou assista ao vídeo completo.</p>
+      </div>
+
+      <article class="case" id="case-nucleo">
+        <div class="case-head">
+          <span class="case-no">01 / 04</span>
+          <div>
+            <h3>Núcleo Emanuel Santana <em>Institucional</em></h3>
+            <p class="sub">Filme institucional da clínica, conduzido pela Kallinca. Apresenta o espaço, os pilares de emagrecimento, saúde e longevidade e o marco de mais de 10.000 pacientes atendidos.</p>
+            <div class="did"><span>Roteiro</span><span>Direção</span><span>Captação 4K</span><span>Color grading</span><span>Tipografia animada</span></div>
+          </div>
+          <div class="case-spec"><span>Formato</span><b>16:9</b><span>Duração</span><b>00:47</b><span>Tipo</span><b>Institucional</b></div>
+        </div>
+        <div class="screen"><video preload="metadata" controls playsinline poster="media/nuc_4.jpg" src="media/nucleo.mp4" aria-label="Vídeo institucional Núcleo Emanuel Santana"></video><div class="rec mono"><span class="dot blink"></span>Play</div></div>
+        <div class="frames" data-frames='[["nuc_1",2.8],["nuc_2",10.6],["nuc_3",15.9],["nuc_4",18.6],["nuc_5",26.5],["nuc_6",39.7]]'></div>
+        <div class="stat"><b>+10.000</b><span>pacientes atendidos, contados em um filme de 47 segundos</span></div>
+      </article>
+
+      <article class="case vertical" id="case-rosa">
+        <div class="case-head">
+          <span class="case-no">02 / 04</span>
+          <div>
+            <h3>Outubro Rosa <em>Núcleo Emanuel Santana</em></h3>
+            <p class="sub">Campanha de combate ao câncer de mama. As colaboradoras da clínica falam sobre conhecer o próprio corpo e manter os exames em dia, e os dados globais entram em motion na paleta rosa da campanha.</p>
+            <div class="did"><span>Roteiro</span><span>Direção</span><span>Captação</span><span>Tratamento de voz</span><span>Motion design</span><span>Legenda</span></div>
+          </div>
+          <div class="case-spec"><span>Formato</span><b>9:16</b><span>Duração</span><b>00:53</b><span>Tipo</span><b>Campanha</b></div>
+        </div>
+        <div class="layout">
+          <div class="screen"><video preload="metadata" controls playsinline poster="media/rosa_2.jpg" src="media/rosa.mp4" aria-label="Vídeo Outubro Rosa do Núcleo Emanuel Santana"></video><div class="rec mono"><span class="dot blink"></span>Play</div></div>
+          <div class="side">
+            <div class="frames" data-frames='[["rosa_1",3.0],["rosa_2",8.9],["rosa_3",17.9],["rosa_4",37.5],["rosa_5",41.7],["rosa_6",50.6]]'></div>
+            <p class="hint mono">Toque em um frame para pular até ele</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="case" id="case-farm">
+        <div class="case-head">
+          <span class="case-no">03 / 04</span>
+          <div>
+            <h3>FARM RIO <em>Farm Friday</em></h3>
+            <p class="sub">Filme de loja para moda: a coleção, o ambiente e o cuidado no atendimento, com grafismos animados sobre a imagem.</p>
+            <div class="did"><span>Captação Canon C-Log3</span><span>Color grading</span><span>Motion design</span><span>Trilha e mixagem</span></div>
+          </div>
+          <div class="case-spec"><span>Formato</span><b>16:9</b><span>Duração</span><b>00:28</b><span>Tipo</span><b>Varejo · moda</b></div>
+        </div>
+        <div class="screen"><video preload="metadata" controls playsinline poster="media/farm_1.jpg" src="media/farm.mp4" aria-label="Vídeo FARM RIO Farm Friday"></video><div class="rec mono"><span class="dot blink"></span>Play</div></div>
+        <div class="frames" data-frames='[["farm_1",2.5],["farm_2",4.0],["farm_3",10.6],["farm_4",15.4],["farm_5",23.6],["farm_6",27.3]]'></div>
+      </article>
+
+      <article class="case vertical" id="case-forja">
+        <div class="case-head">
+          <span class="case-no">04 / 04</span>
+          <div>
+            <h3>FORJA 21 <em>com João Gabriel</em></h3>
+            <p class="sub">O primeiro reel que editamos para a FORJA 21. Palavras-chave gigantes em vermelho atrás dele, telas de máquina de escrever escondendo os cortes, os três passos num quadro em preto e branco e o fechamento no tempo da música. Deu tão certo que virou o padrão de edição dos vídeos seguintes.</p>
+            <div class="did"><span>Edição</span><span>Motion design</span><span>Recorte do sujeito</span><span>Tratamento de voz</span><span>Trilha</span></div>
+          </div>
+          <div class="case-spec"><span>Formato</span><b>9:16</b><span>Duração</span><b>00:24</b><span>Tipo</span><b>Reels</b></div>
+        </div>
+        <div class="layout">
+          <div class="screen"><video preload="metadata" controls playsinline poster="media/joao_2.jpg" src="media/joao.mp4" aria-label="Reel FORJA 21 com João Gabriel"></video><div class="rec mono"><span class="dot blink"></span>Play</div></div>
+          <div class="side">
+            <div class="frames" data-frames='[["joao_1",1.5],["joao_2",8.7],["joao_3",10.0],["joao_4",13.4],["joao_5",16.0],["joao_6",22.8]]'></div>
+            <div class="stat"><b>1º reel</b><span>virou o Padrão Forja, usado nos vídeos seguintes do lançamento</span></div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="band stone" id="processo">
+    <div class="wrap">
+      <div class="slate mono"><span>Como trabalhamos</span><span class="bar"></span><span>TC 00:00:04:00</span></div>
+      <h2 class="big">Você atende. A gente enquadra.</h2>
+      <div class="steps">
+        <div class="step"><span class="mono">Etapa 01</span><h3>Diagnóstico</h3><p>Entendemos seu posicionamento, seu público e o que você quer que o conteúdo faça.</p></div>
+        <div class="step"><span class="mono">Etapa 02</span><h3>Estratégia</h3><p>Pauta, roteiros e calendário. Você aprova antes de qualquer gravação.</p></div>
+        <div class="step"><span class="mono">Etapa 03</span><h3>Produção</h3><p>Gravação concentrada, com o mínimo do seu tempo e o máximo de material.</p></div>
+        <div class="step"><span class="mono">Etapa 04</span><h3>Entrega</h3><p>Vídeos editados, com cor, legenda e trilha, prontos para postar no dia certo.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band close" id="contato">
+    <div class="wrap">
+      <div class="slate mono"><span>Próximo passo</span><span class="bar"></span><span>TC 00:00:05:00</span></div>
+      <div class="close-grid">
+        <div>
+          <h2>Vamos enquadrar o seu trabalho.</h2>
+          <div class="contacts">
+            <div class="row"><span class="k mono">Instagram</span><span class="v" id="c-ig">@[SEUPERFIL]</span><button class="copybtn" data-copy="c-ig">Copiar</button></div>
+            <div class="row"><span class="k mono">WhatsApp</span><span class="v" id="c-wa">[WHATSAPP]</span><button class="copybtn" data-copy="c-wa">Copiar</button></div>
+            <div class="row"><span class="k mono">E-mail</span><span class="v" id="c-em">[E-MAIL]</span><button class="copybtn" data-copy="c-em">Copiar</button></div>
+          </div>
+        </div>
+        <div class="symbol" id="symClose" aria-hidden="true"></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap mono"><span>Frame® · Produtora de conteúdo estratégico</span><span>Momentos são raros. A gente registra.</span></div>
+</footer>
+
+<script>
+window.FRAME_LOGO={"w":2911.1,"h":737.7,"tx":-41.02,"ty":727.54,"letters":[{"d":"M41.01598262786865 0.0V-727.5390625H537.6947522163391V-584.5713019371033H216.40527248382568V-402.5389552116394H506.0541033744812V-262.69614696502686H216.40527248382568V0.0Z","x0":-0.004017372131350783,"x1":496.67475221633913},{"d":"M542.8517532348633 0.0V-545.8984375H711.2097811698914V-445.703387260437H717.0691561698914Q731.8152558803558 -500.2930164337158 765.6532299518585 -526.6113579273224Q799.4912040233612 -552.929699420929 844.0225195884705 -552.929699420929Q856.0341966152191 -552.929699420929 868.9248335361481 -551.3183921575546Q881.815470457077 -549.7070848941803 892.6552605628967 -546.4844703674316V-395.89953422546387Q880.0577294826508 -400.39166808128357 860.0382727384567 -402.54010260105133Q840.0188159942627 -404.6885371208191 824.4914484024048 -404.6885371208191Q793.5342860221863 -404.6885371208191 768.9248096942902 -391.0166174173355Q744.315333366394 -377.34469771385193 730.3992581367493 -353.02822291851044Q716.4831829071045 -328.71174812316895 716.4831829071045 -296.2898015975952V0.0Z","x0":501.8317532348633,"x1":851.6352605628967},{"d":"M1034.824504852295 9.57036018371582Q982.6760733127594 9.57036018371582 941.9533902406693 -8.251935243606567Q901.2307071685791 -26.074230670928955 878.2814586162567 -61.71879172325134Q855.3322100639343 -97.36335277557373 855.3322100639343 -151.36724710464478Q855.3322100639343 -196.67977094650269 871.1525642871857 -227.88091003894806Q886.972918510437 -259.08204913139343 915.0491350889206 -278.6620855331421Q943.1253516674042 -298.24212193489075 979.6976292133331 -308.6913079023361Q1016.2699067592621 -319.1404938697815 1057.8714156150818 -322.4608302116394Q1104.5511507987976 -326.46477222442627 1132.822676897049 -331.05459809303284Q1161.0942029953003 -335.6444239616394 1173.9360237121582 -344.9217528104782Q1186.777844429016 -354.199081659317 1186.777844429016 -370.7030415534973V-372.85149097442627Q1186.777844429016 -400.09796619415283 1168.174176812172 -415.088415145874Q1149.5705091953278 -430.0788640975952 1117.6365160942078 -430.0788640975952Q1083.0658221244812 -430.0788640975952 1062.167181968689 -415.0884598493576Q1041.2685418128967 -400.09805560112 1035.4090476036072 -373.8284707069397L875.6446385383606 -379.4928789138794Q882.6761090755463 -429.2975664138794 912.3148763179779 -468.45754981040955Q941.9536435604095 -507.6175332069397 993.9554476737976 -530.1759541034698Q1045.9572517871857 -552.734375 1119.394257068634 -552.734375Q1171.151682138443 -552.734375 1215.096845626831 -540.5762642621994Q1259.0420091152191 -528.4181535243988 1291.7080217599869 -505.0295442342758Q1324.3740344047546 -481.64093494415283 1342.4893164634705 -447.9006230831146Q1360.6045985221863 -414.1603112220764 1360.6045985221863 -371.0935711860657V0.0H1196.9339394569397V-76.56246423721313H1193.0276894569397Q1178.0863845348358 -48.43762516975403 1155.527829527855 -29.345810413360596Q1132.969274520874 -10.253995656967163 1102.9399329423904 -0.3418177366256714Q1072.9105913639069 9.57036018371582 1034.824504852295 9.57036018371582ZM1088.1441974639893 -104.68685626983643Q1116.07421875 -104.68685626983643 1138.730644583702 -116.01510643959045Q1161.3870704174042 -127.34335660934448 1174.8636955022812 -147.41188287734985Q1188.3403205871582 -167.48040914535522 1188.3403205871582 -194.14067268371582V-245.50825357437134Q1181.0161316394806 -241.89493060112 1170.4203182458878 -238.52576315402985Q1159.824504852295 -235.1565957069397 1147.177859544754 -232.42220282554626Q1134.5312142372131 -229.68780994415283 1121.738105416298 -227.58819162845612Q1108.9449965953827 -225.4885733127594 1096.9332599639893 -223.63311052322388Q1072.0307970046997 -220.01981735229492 1054.843127131462 -211.6701900959015Q1037.6554572582245 -203.32056283950806 1028.7197822332382 -190.42985141277313Q1019.784107208252 -177.5391399860382 1019.784107208252 -159.76548194885254Q1019.784107208252 -132.71445035934448 1038.9737629890442 -118.70065331459045Q1058.1634187698364 -104.68685626983643 1088.1441974639893 -104.68685626983643Z","x0":814.3122100639343,"x1":1319.5845985221863},{"d":"M1387.9298782348633 0.0V-545.8984375H1552.3817157745361V-445.11741399765015H1558.631739616394Q1575.721583366394 -494.922012090683 1616.5418541431427 -523.8281935453415Q1657.3621249198914 -552.734375 1712.9284954071045 -552.734375Q1770.1550042629242 -552.734375 1810.5357950925827 -523.437574505806Q1850.9165859222412 -494.14077401161194 1861.5612602233887 -445.11741399765015H1867.4206352233887Q1882.6551055908203 -493.8477873802185 1927.137485742569 -523.2910811901093Q1971.6198658943176 -552.734375 2032.0690488815308 -552.734375Q2109.217426776886 -552.734375 2157.654902935028 -503.36919724941254Q2206.09237909317 -454.0040194988251 2206.09237909317 -367.57808923721313V0.0H2032.265625V-327.73494720458984Q2032.265625 -368.3602511882782 2011.1716902256012 -389.7470384836197Q1990.0777554512024 -411.1338257789612 1956.874451637268 -411.1338257789612Q1921.2295925617218 -411.1338257789612 1900.8680945634842 -387.94028759002686Q1880.5065965652466 -364.74674940109253 1880.5065965652466 -325.7817029953003V0.0H1713.320336341858V-329.49286699295044Q1713.320336341858 -367.28596687316895 1692.9100370407104 -389.20989632606506Q1672.499737739563 -411.1338257789612 1638.7104606628418 -411.1338257789612Q1615.7610929012299 -411.1338257789612 1598.3781135082245 -400.19622445106506Q1580.9951341152191 -389.25862312316895 1571.2782210111618 -369.62954699993134Q1561.5613079071045 -350.0004708766937 1561.5613079071045 -322.85183668136597V0.0Z","x0":1346.9098782348633,"x1":2165.07237909317},{"d":"M2488.398222923279 10.15627384185791Q2402.7537989616394 10.15627384185791 2340.693323612213 -23.63280951976776Q2278.632848262787 -57.42189288139343 2245.5274152755737 -120.45900523662567Q2212.4219822883606 -183.4961175918579 2212.4219822883606 -270.89840173721313Q2212.4219822883606 -355.27339577674866 2245.625062584877 -418.6523109674454Q2278.8281428813934 -482.0312261581421 2339.4237595796585 -517.382800579071Q2400.0193762779236 -552.734375 2482.343463897705 -552.734375Q2540.448694229126 -552.734375 2588.886095881462 -534.472718834877Q2637.323497533798 -516.211062669754 2672.723873257637 -480.76190054416656Q2708.124248981476 -445.3127384185791 2727.4602043628693 -393.4572637081146Q2746.7961597442627 -341.60178899765015 2746.7961597442627 -274.02353286743164V-230.85957765579224H2272.7735328674316V-331.24977350234985H2664.277194738388L2583.125500679016 -307.8122138977051Q2583.125500679016 -345.3124761581421 2571.894942522049 -371.97287380695343Q2560.664384365082 -398.63327145576477 2538.642718195915 -413.08654844760895Q2516.6210520267487 -427.5398254394531 2483.905940055847 -427.5398254394531Q2451.1908280849457 -427.5398254394531 2428.778513073921 -413.0377173423767Q2406.3661980628967 -398.5356092453003 2394.7449910640717 -372.4611848592758Q2383.1237840652466 -346.38676047325134 2383.1237840652466 -310.7420802116394V-238.672137260437Q2383.1237840652466 -200.48817992210388 2396.6004687547684 -172.75357246398926Q2410.07715344429 -145.01896500587463 2434.5890867710114 -130.0286203622818Q2459.1010200977325 -115.03827571868896 2491.523175239563 -115.03827571868896Q2514.0819239616394 -115.03827571868896 2532.5390833616257 -121.43480777740479Q2550.996242761612 -127.8313398361206 2564.2775881290436 -140.28261601924896Q2577.558933496475 -152.73389220237732 2584.2972683906555 -170.5074906349182L2743.47576379776 -165.8197045326233Q2733.5147845745087 -112.30427026748657 2700.3605353832245 -72.70479202270508Q2667.2062861919403 -33.105313777923584 2613.5931450128555 -11.474519968032837Q2559.9800038337708 10.15627384185791 2488.398222923279 10.15627384185791Z","x0":2171.4019822883606,"x1":2705.7761597442627}],"reg":"M2836.112608909607 -603.90625V-682.421875H2874.550166130066Q2882.0207619667053 -682.568359375 2888.231676220894 -679.5068502426147Q2894.4425904750824 -676.4453411102295 2898.1486612558365 -670.6592172384262Q2901.8547320365906 -664.8730933666229 2901.8547320365906 -656.638407248717Q2901.8547320365906 -648.2617437839508 2898.0021768808365 -642.3144727945328Q2894.1496217250824 -636.3672018051147 2887.806867957115 -633.3789169788361Q2881.464114189148 -630.3906321525574 2873.729839324951 -630.3906321525574H2847.3039650917053V-645.2147722244263H2869.3352723121643Q2873.8176548480988 -645.1561748981476 2877.0842903852463 -647.9927821518623Q2880.350925922394 -650.8293894055771 2880.350925922394 -656.6207958819115Q2880.350925922394 -662.4122023582458 2877.054991722107 -664.9317353963852Q2873.75905752182 -667.4512684345245 2869.4524669647217 -667.5391554832458H2856.561698913574V-603.90625ZM2886.3273525238037 -640.2344107627869 2904.37429189682 -603.90625H2881.8158411979675L2865.116515159607 -640.2344107627869ZM2866.87429189682 -557.03125Q2849.29616689682 -557.03125 2833.84206533432 -563.6962890625Q2818.38796377182 -570.361328125 2806.66921377182 -582.080078125Q2794.95046377182 -593.798828125 2788.3733117580414 -609.2529296875Q2781.7961597442627 -624.70703125 2781.7961597442627 -642.28515625Q2781.7961597442627 -659.86328125 2788.3733117580414 -675.3173828125Q2794.95046377182 -690.771484375 2806.66921377182 -702.490234375Q2818.38796377182 -714.208984375 2833.84206533432 -720.8740234375Q2849.29616689682 -727.5390625 2866.87429189682 -727.5390625Q2884.59890127182 -727.5390625 2900.05300283432 -720.8740234375Q2915.50710439682 -714.208984375 2927.22585439682 -702.490234375Q2938.94460439682 -690.771484375 2945.53640127182 -675.3173828125Q2952.12819814682 -659.86328125 2952.12819814682 -642.28515625Q2952.12819814682 -624.70703125 2945.55222094059 -609.2529296875Q2938.9762437343597 -593.798828125 2927.2856175899506 -582.080078125Q2915.5949914455414 -570.361328125 2900.11296192027 -563.6962890625Q2884.6309323949986 -557.03125 2866.87429189682 -557.03125ZM2866.87429189682 -579.6483516693115Q2884.3306229319046 -579.6483516693115 2898.5937226800834 -588.0700250156224Q2912.856822428262 -596.4916983619332 2921.3011451647462 -610.7165415771306Q2929.74546790123 -624.9413847923279 2929.686870574951 -642.28515625Q2929.74546790123 -659.6289277076721 2921.2911115586758 -673.8813729491085Q2912.8367552161217 -688.1338181905448 2898.5567079484463 -696.5718330349773Q2884.276660680771 -705.0098478794098 2866.87429189682 -704.9219608306885Q2849.6184074878693 -705.0098478794098 2835.365962246433 -696.5718330349773Q2821.1135170049965 -688.1338181905448 2812.675502160564 -673.8813729491085Q2804.2374873161316 -659.6289277076721 2804.2374873161316 -642.3120161120811Q2804.2374873161316 -624.9951045164901 2812.6896464824677 -610.7299437348762Q2821.1418056488037 -596.4647829532623 2835.371263444239 -588.0565673112869Q2849.6007212396744 -579.6483516693115 2866.87429189682 -579.6483516693115Z","sym":"<rect x=\"8.0\" y=\"8.0\" width=\"984\" height=\"984\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"16\"/><path d=\"M518.212765455246 -523.4081447124481Q518.212765455246 -570.9277093410492 501.6472594391915 -607.6211512833834Q485.081753423137 -644.3145932257175 455.96662163734436 -669.43359375Q426.5134632587433 -694.6191489696503 386.52318716049194 -707.6611369848251Q346.5329110622406 -720.703125 299.6285557746887 -720.703125Q252.5327248573303 -720.703125 212.77979230880737 -707.6611369848251Q173.02685976028442 -694.6191489696503 144.56028906644974 -669.43359375Q115.58538675308228 -644.2480385303497 99.39396381378174 -607.5878739356995Q83.2025408744812 -570.9277093410492 83.2025408744812 -523.4081447124481Q83.2025408744812 -497.0409572124481 90.4522302903627 -473.1151759624481Q97.70191970624421 -449.1893947124481 110.75136065483093 -429.1698634624481Q123.3685314655304 -409.5116853713989 141.7102146716345 -393.5713001659938Q160.0518978777386 -377.6309149605887 182.62627720832825 -366.2109375Q156.13216161727905 -354.20897603034973 134.90431475174893 -336.81850034766404Q113.67646788621877 -319.42802466497835 98.58111011517512 -297.68993006162117Q83.48575234413147 -275.46876668930054 75.3265768289566 -249.12982136011124Q67.16740131378174 -222.79087603092194 67.16740131378174 -193.31058859825134Q67.16740131378174 -143.63282918930054 85.17034351825714 -105.75196146965027Q103.17328572273254 -67.87109375 134.78463888168335 -42.48046875Q166.12549954997007 -16.6015625 208.84005965432857 -3.41796875Q251.5546197586871 9.765625 301.0933995246887 9.765625Q349.9508798122406 9.765625 392.38256216049194 -3.5205036401748657Q434.8142445087433 -16.80663228034973 466.4323947429657 -42.68553853034973Q497.5486695766449 -68.07616353034973 515.6541466712952 -105.95703125Q533.7596237659454 -143.83789896965027 533.7596237659454 -193.31058859825134Q533.7596237659454 -227.9103398323059 522.5241929292679 -257.67606496810913Q511.28876209259033 -287.44179010391235 491.13237857818604 -311.0355734825134Q477.0015776157379 -328.3987045288086 458.3249241113663 -342.0509397983551Q439.64827060699463 -355.7031750679016 417.68553853034973 -365.72265625Q435.85944175720215 -374.95121359825134 451.0889798402786 -387.1241360902786Q466.3185179233551 -399.2970585823059 478.11540961265564 -413.3596420288086Q497.02152609825134 -435.6642961502075 507.5146108865738 -463.55482935905457Q518.0076956748962 -491.4453625679016 518.212765455246 -523.4081447124481ZM416.8057143688202 -199.51188564300537Q416.8057143688202 -172.3847140868505 408.21200609207153 -151.07050786415738Q399.6182978153229 -129.75630164146423 384.5890760421753 -114.91391807794571Q369.1423758864403 -100.07153451442719 347.8509783744812 -92.21380203962326Q326.5595808625221 -84.35606956481934 301.0933995246887 -84.35606956481934Q274.5756818155937 -84.35606956481934 253.23720584655632 -91.90709335463387Q231.89872987751892 -99.45811714444841 216.98251366615295 -113.72116208076477Q201.38686895370483 -128.3402442932129 192.85662472248077 -150.058418445523Q184.3263804912567 -171.77659259783312 184.3263804912567 -199.41790515531875Q184.3263804912567 -226.18171572685242 192.52243518829346 -247.96669581811204Q200.7184898853302 -269.75167590937167 215.84966778755188 -285.55646538734436Q230.87888956069946 -300.8688986301422 252.2797096859325 -309.21846628189087Q273.6805298111655 -317.5680339336395 300.1168370246887 -317.5680339336395Q326.22024416923523 -317.5680339336395 347.68497943878174 -309.21846628189087Q369.14971470832825 -300.8688986301422 384.66721773147583 -285.55646538734436Q399.91240203380585 -269.75167590937167 408.359058201313 -247.96669581811204Q416.8057143688202 -226.18171572685242 416.8057143688202 -199.51188564300537ZM401.62020921707153 -519.1925567255091Q401.62020921707153 -495.103625108057 394.34534665381557 -475.3162884222927Q387.07048409055955 -455.5289517365285 374.13739508921554 -441.76384795512723Q360.8001470565796 -427.56858468055725 342.2260284423828 -419.87329721450806Q323.65190982818604 -412.17800974845886 300.99949686326715 -412.17800974845886Q277.9196798801422 -412.17800974845886 259.30649042129517 -419.87329721450806Q240.69330096244812 -427.56858468055725 227.5779902935028 -441.8126702308655Q214.05282616615295 -455.62511682510376 207.06556737422943 -475.29301047325134Q200.0783085823059 -494.9609041213989 200.0783085823059 -519.2527920007706Q200.0783085823059 -543.5446798801422 206.9239616394043 -563.4176433086395Q213.76961469650269 -583.2906067371368 226.70410573482513 -597.1381962299347Q239.63859677314758 -610.9857857227325 258.00764560699463 -618.3978617191315Q276.3766944408417 -625.8099377155304 299.4869500398636 -625.8099377155304Q322.5972056388855 -625.8099377155304 341.25421541493114 -618.0491632648877Q359.9112251909768 -610.288388814245 373.5930323600769 -596.444845199585Q386.6691291332245 -582.1089744567871 394.144669175148 -562.4801516532898Q401.62020921707153 -542.8513288497925 401.62020921707153 -519.1925567255091ZM1134.121060371399 -645.7124650478363V-710.9375H642.6070630550385V-613.4271919727325H1011.2296342849731L727.118581533432 0.0H849.8830795288086Z\" fill=\"currentColor\" transform=\"translate(58.29 125.26) scale(0.08500)\"/><path d=\"M408.4474742412567 -727.8024256229401V-819.863498210907H200.64431428909302V158.85761380195618H408.4474742412567V66.79654121398926H314.9811029434204V-727.8024256229401ZM1128.457248210907 0.0V-94.12169456481934H797.5791096687317L955.3613364696503 -263.20260763168335Q986.7481887340546 -296.18123173713684 1013.3254081010818 -327.42151618003845Q1039.9026274681091 -358.66180062294006 1059.5901608467102 -389.5016610622406Q1078.7894129753113 -420.34152150154114 1089.6732062101364 -451.9138038158417Q1100.5569994449615 -483.4860861301422 1100.5569994449615 -517.2068476676941Q1100.5569994449615 -561.9530081748962 1085.8060270547867 -599.3602722883224Q1071.0550546646118 -636.7675364017487 1043.2230234146118 -663.7011468410492Q1015.1077806949615 -690.6347572803497 973.9749431610107 -705.6689411401749Q932.8421056270599 -720.703125 880.2834451198578 -720.703125Q824.4630992412567 -720.703125 779.4727981090546 -702.7001827955246Q734.4824969768524 -684.6972405910492 703.2031416893005 -653.7792384624481Q671.4355051517487 -622.861236333847 654.3944478034973 -581.6502571105957Q637.353390455246 -540.4392778873444 637.353390455246 -494.101345539093H754.512369632721Q754.512369632721 -524.7555673122406 762.3492628335953 -549.0621328353882Q770.1861560344696 -573.3686983585358 785.7818007469177 -590.1459753513336Q800.8891642093658 -606.4349710941315 823.8968849182129 -615.131214261055Q846.9046056270599 -623.8274574279785 877.7345418930054 -623.8274574279785Q902.2168219089508 -623.8274574279785 922.0116436481476 -615.6585663557053Q941.8064653873444 -607.489675283432 956.1423361301422 -592.9487347602844Q969.9899256229401 -578.1245827674866 977.5436073541641 -557.6217323541641Q985.0972890853882 -537.1188819408417 985.0972890853882 -512.167751789093Q985.0972890853882 -493.798702955246 979.8678010702133 -475.3759056329727Q974.6383130550385 -456.95310831069946 962.7926349639893 -436.1914396286011Q950.6637454032898 -414.9414896965027 931.0837090015411 -389.7852897644043Q911.5036725997925 -364.6290898323059 882.8025758266449 -333.07644724845886L651.5916883945465 -81.08446002006531V0.0ZM1728.554904460907 0.0V-94.12169456481934H1397.6767659187317L1555.4589927196503 -263.20260763168335Q1586.8458449840546 -296.18123173713684 1613.4230643510818 -327.42151618003845Q1640.0002837181091 -358.66180062294006 1659.6878170967102 -389.5016610622406Q1678.8870692253113 -420.34152150154114 1689.7708624601364 -451.9138038158417Q1700.6546556949615 -483.4860861301422 1700.6546556949615 -517.2068476676941Q1700.6546556949615 -561.9530081748962 1685.9036833047867 -599.3602722883224Q1671.1527109146118 -636.7675364017487 1643.3206796646118 -663.7011468410492Q1615.2054369449615 -690.6347572803497 1574.0725994110107 -705.6689411401749Q1532.93976187706 -720.703125 1480.3811013698578 -720.703125Q1424.5607554912567 -720.703125 1379.5704543590546 -702.7001827955246Q1334.5801532268524 -684.6972405910492 1303.3007979393005 -653.7792384624481Q1271.5331614017487 -622.861236333847 1254.4921040534973 -581.6502571105957Q1237.451046705246 -540.4392778873444 1237.451046705246 -494.101345539093H1354.610025882721Q1354.610025882721 -524.7555673122406 1362.4469190835953 -549.0621328353882Q1370.2838122844696 -573.3686983585358 1385.8794569969177 -590.1459753513336Q1400.9868204593658 -606.4349710941315 1423.994541168213 -615.131214261055Q1447.00226187706 -623.8274574279785 1477.8321981430054 -623.8274574279785Q1502.3144781589508 -623.8274574279785 1522.1092998981476 -615.6585663557053Q1541.9041216373444 -607.489675283432 1556.2399923801422 -592.9487347602844Q1570.08758187294 -578.1245827674866 1577.6412636041641 -557.6217323541641Q1585.1949453353882 -537.1188819408417 1585.1949453353882 -512.167751789093Q1585.1949453353882 -493.798702955246 1579.9654573202133 -475.3759056329727Q1574.7359693050385 -456.95310831069946 1562.8902912139893 -436.1914396286011Q1550.7614016532898 -414.9414896965027 1531.1813652515411 -389.7852897644043Q1511.6013288497925 -364.6290898323059 1482.900232076645 -333.07644724845886L1251.6893446445465 -81.08446002006531V0.0ZM1999.5022118091583 -408.27175974845886V-316.33761525154114H2069.3363547325134Q2099.62922334671 -316.33761525154114 2124.306857585907 -309.37474966049194Q2148.9844918251038 -302.41188406944275 2166.7383313179016 -287.99787163734436Q2184.0038895606995 -273.583859205246 2193.432554602623 -251.538023352623Q2202.8612196445465 -229.4921875 2202.8612196445465 -198.83796572685242Q2202.8612196445465 -171.37721180915833 2194.755792617798 -150.25915205478668Q2186.650365591049 -129.14109230041504 2171.3379323482513 -114.80522155761719Q2155.742287635803 -99.61971640586853 2133.1056356430054 -91.98789298534393Q2110.4689836502075 -84.35606956481934 2082.25616812706 -84.35606956481934Q2055.742621421814 -84.35606956481934 2033.853068947792 -92.1538919210434Q2011.9635164737701 -99.95171427726746 1996.367871761322 -114.08251523971558Q1980.4890155792236 -127.93010473251343 1971.9587713479996 -147.62239158153534Q1963.4285271167755 -167.31467843055725 1963.4285271167755 -190.89853763580322H1846.7578291893005Q1846.7578291893005 -141.19142293930054 1865.9961521625519 -103.72069478034973Q1885.2344751358032 -66.24996662139893 1917.490392923355 -41.142553091049194Q1949.746310710907 -15.751928091049194 1992.138922214508 -2.993151545524597Q2034.5315337181091 9.765625 2080.5568993091583 9.765625Q2131.240576505661 9.765625 2175.0492453575134 -4.150390625Q2218.857914209366 -18.06640625 2250.8306205272675 -44.921875Q2282.803326845169 -71.2890625 2301.02601647377 -110.14649271965027Q2319.248706102371 -149.00392293930054 2319.248706102371 -198.80861043930054Q2319.248706102371 -225.48836469650269 2312.9254430532455 -250.67391991615295Q2306.60218000412 -275.8594751358032 2292.6470935344696 -297.7539896965027Q2278.4869372844696 -319.3652927875519 2256.1432123184204 -336.5820646286011Q2233.799487352371 -353.79883646965027 2201.963633298874 -364.74609375Q2228.789746761322 -376.953125 2248.8336712121964 -394.4140374660492Q2268.8775956630707 -411.8749499320984 2282.0611894130707 -432.30462074279785Q2295.2447831630707 -452.5292217731476 2301.875650882721 -474.6434837579727Q2308.506518602371 -496.75774574279785 2308.506518602371 -518.6816155910492Q2308.506518602371 -568.2812333106995 2291.8902784585953 -606.0204952955246Q2275.2740383148193 -643.7597572803497 2245.2544569969177 -669.43359375Q2215.234875679016 -694.82421875 2173.1351912021637 -707.763671875Q2131.0355067253113 -720.703125 2080.3518295288086 -720.703125Q2031.3186347484589 -720.703125 1989.9025857448578 -706.0302942991257Q1948.4865367412567 -691.3574635982513 1918.2618856430054 -665.5566990375519Q1888.037234544754 -639.2676532268524 1871.035248041153 -603.5205870866776Q1854.0332615375519 -567.7735209465027 1854.0332615375519 -525.5469083786011H1970.9090292453766Q1970.9090292453766 -548.5643446445465 1979.3367385864258 -567.0603215694427Q1987.764447927475 -585.556298494339 2002.871811389923 -598.8374650478363Q2017.4908936023712 -611.8354201316833 2037.773996591568 -618.8226789236069Q2058.0570995807648 -625.8099377155304 2082.05109834671 -625.8099377155304Q2109.0041399002075 -625.8099377155304 2129.648596048355 -618.6663955450058Q2150.2930521965027 -611.5228533744812 2163.935571908951 -598.0854034423828Q2177.7831614017487 -584.1596722602844 2184.8094910383224 -564.1597807407379Q2191.8358206748962 -544.1598892211914 2191.8358206748962 -518.6522603034973Q2191.8358206748962 -494.91211771965027 2184.399351477623 -474.85847771167755Q2176.9628822803497 -454.80483770370483 2162.5000834465027 -440.6740367412567Q2147.2657918930054 -425.4103899002075 2123.974859714508 -416.8410748243332Q2100.6839275360107 -408.27175974845886 2069.3363547325134 -408.27175974845886ZM2596.7284739017487 -819.863498210907V-727.8024256229401H2690.683126449585V66.79654121398926H2596.7284739017487V158.85761380195618H2805.0199151039124V-819.863498210907Z\" fill=\"currentColor\" transform=\"translate(697.57 125.26) scale(0.08500)\"/><path d=\"M41.01598262786865 0.0V-727.5390625H537.6947522163391V-584.5713019371033H216.40527248382568V-402.5389552116394H506.0541033744812V-262.69614696502686H216.40527248382568V0.0ZM537.8517532348633 0.0V-545.8984375H706.2097811698914V-445.703387260437H712.0691561698914Q726.8152558803558 -500.2930164337158 760.6532299518585 -526.6113579273224Q794.4912040233612 -552.929699420929 839.0225195884705 -552.929699420929Q851.0341966152191 -552.929699420929 863.9248335361481 -551.3183921575546Q876.815470457077 -549.7070848941803 887.6552605628967 -546.4844703674316V-395.89953422546387Q875.0577294826508 -400.39166808128357 855.0382727384567 -402.54010260105133Q835.0188159942627 -404.6885371208191 819.4914484024048 -404.6885371208191Q788.5342860221863 -404.6885371208191 763.9248096942902 -391.0166174173355Q739.315333366394 -377.34469771385193 725.3992581367493 -353.02822291851044Q711.4831829071045 -328.71174812316895 711.4831829071045 -296.2898015975952V0.0Z\" fill=\"currentColor\" transform=\"translate(253.90 682.80) scale(0.53000)\"/><path d=\"M41.01598262786865 0.0V-727.5390625H537.6947522163391V-584.5713019371033H216.40527248382568V-402.5389552116394H506.0541033744812V-262.69614696502686H216.40527248382568V0.0ZM542.8517532348633 0.0V-545.8984375H711.2097811698914V-445.703387260437H717.0691561698914Q731.8152558803558 -500.2930164337158 765.6532299518585 -526.6113579273224Q799.4912040233612 -552.929699420929 844.0225195884705 -552.929699420929Q856.0341966152191 -552.929699420929 868.9248335361481 -551.3183921575546Q881.815470457077 -549.7070848941803 892.6552605628967 -546.4844703674316V-395.89953422546387Q880.0577294826508 -400.39166808128357 860.0382727384567 -402.54010260105133Q840.0188159942627 -404.6885371208191 824.4914484024048 -404.6885371208191Q793.5342860221863 -404.6885371208191 768.9248096942902 -391.0166174173355Q744.315333366394 -377.34469771385193 730.3992581367493 -353.02822291851044Q716.4831829071045 -328.71174812316895 716.4831829071045 -296.2898015975952V0.0ZM1034.824504852295 9.57036018371582Q982.6760733127594 9.57036018371582 941.9533902406693 -8.251935243606567Q901.2307071685791 -26.074230670928955 878.2814586162567 -61.71879172325134Q855.3322100639343 -97.36335277557373 855.3322100639343 -151.36724710464478Q855.3322100639343 -196.67977094650269 871.1525642871857 -227.88091003894806Q886.972918510437 -259.08204913139343 915.0491350889206 -278.6620855331421Q943.1253516674042 -298.24212193489075 979.6976292133331 -308.6913079023361Q1016.2699067592621 -319.1404938697815 1057.8714156150818 -322.4608302116394Q1104.5511507987976 -326.46477222442627 1132.822676897049 -331.05459809303284Q1161.0942029953003 -335.6444239616394 1173.9360237121582 -344.9217528104782Q1186.777844429016 -354.199081659317 1186.777844429016 -370.7030415534973V-372.85149097442627Q1186.777844429016 -400.09796619415283 1168.174176812172 -415.088415145874Q1149.5705091953278 -430.0788640975952 1117.6365160942078 -430.0788640975952Q1083.0658221244812 -430.0788640975952 1062.167181968689 -415.0884598493576Q1041.2685418128967 -400.09805560112 1035.4090476036072 -373.8284707069397L875.6446385383606 -379.4928789138794Q882.6761090755463 -429.2975664138794 912.3148763179779 -468.45754981040955Q941.9536435604095 -507.6175332069397 993.9554476737976 -530.1759541034698Q1045.9572517871857 -552.734375 1119.394257068634 -552.734375Q1171.151682138443 -552.734375 1215.096845626831 -540.5762642621994Q1259.0420091152191 -528.4181535243988 1291.7080217599869 -505.0295442342758Q1324.3740344047546 -481.64093494415283 1342.4893164634705 -447.9006230831146Q1360.6045985221863 -414.1603112220764 1360.6045985221863 -371.0935711860657V0.0H1196.9339394569397V-76.56246423721313H1193.0276894569397Q1178.0863845348358 -48.43762516975403 1155.527829527855 -29.345810413360596Q1132.969274520874 -10.253995656967163 1102.9399329423904 -0.3418177366256714Q1072.9105913639069 9.57036018371582 1034.824504852295 9.57036018371582ZM1088.1441974639893 -104.68685626983643Q1116.07421875 -104.68685626983643 1138.730644583702 -116.01510643959045Q1161.3870704174042 -127.34335660934448 1174.8636955022812 -147.41188287734985Q1188.3403205871582 -167.48040914535522 1188.3403205871582 -194.14067268371582V-245.50825357437134Q1181.0161316394806 -241.89493060112 1170.4203182458878 -238.52576315402985Q1159.824504852295 -235.1565957069397 1147.177859544754 -232.42220282554626Q1134.5312142372131 -229.68780994415283 1121.738105416298 -227.58819162845612Q1108.9449965953827 -225.4885733127594 1096.9332599639893 -223.63311052322388Q1072.0307970046997 -220.01981735229492 1054.843127131462 -211.6701900959015Q1037.6554572582245 -203.32056283950806 1028.7197822332382 -190.42985141277313Q1019.784107208252 -177.5391399860382 1019.784107208252 -159.76548194885254Q1019.784107208252 -132.71445035934448 1038.9737629890442 -118.70065331459045Q1058.1634187698364 -104.68685626983643 1088.1441974639893 -104.68685626983643ZM1387.9298782348633 0.0V-545.8984375H1552.3817157745361V-445.11741399765015H1558.631739616394Q1575.721583366394 -494.922012090683 1616.5418541431427 -523.8281935453415Q1657.3621249198914 -552.734375 1712.9284954071045 -552.734375Q1770.1550042629242 -552.734375 1810.5357950925827 -523.437574505806Q1850.9165859222412 -494.14077401161194 1861.5612602233887 -445.11741399765015H1867.4206352233887Q1882.6551055908203 -493.8477873802185 1927.137485742569 -523.2910811901093Q1971.6198658943176 -552.734375 2032.0690488815308 -552.734375Q2109.217426776886 -552.734375 2157.654902935028 -503.36919724941254Q2206.09237909317 -454.0040194988251 2206.09237909317 -367.57808923721313V0.0H2032.265625V-327.73494720458984Q2032.265625 -368.3602511882782 2011.1716902256012 -389.7470384836197Q1990.0777554512024 -411.1338257789612 1956.874451637268 -411.1338257789612Q1921.2295925617218 -411.1338257789612 1900.8680945634842 -387.94028759002686Q1880.5065965652466 -364.74674940109253 1880.5065965652466 -325.7817029953003V0.0H1713.320336341858V-329.49286699295044Q1713.320336341858 -367.28596687316895 1692.9100370407104 -389.20989632606506Q1672.499737739563 -411.1338257789612 1638.7104606628418 -411.1338257789612Q1615.7610929012299 -411.1338257789612 1598.3781135082245 -400.19622445106506Q1580.9951341152191 -389.25862312316895 1571.2782210111618 -369.62954699993134Q1561.5613079071045 -350.0004708766937 1561.5613079071045 -322.85183668136597V0.0ZM2488.398222923279 10.15627384185791Q2402.7537989616394 10.15627384185791 2340.693323612213 -23.63280951976776Q2278.632848262787 -57.42189288139343 2245.5274152755737 -120.45900523662567Q2212.4219822883606 -183.4961175918579 2212.4219822883606 -270.89840173721313Q2212.4219822883606 -355.27339577674866 2245.625062584877 -418.6523109674454Q2278.8281428813934 -482.0312261581421 2339.4237595796585 -517.382800579071Q2400.0193762779236 -552.734375 2482.343463897705 -552.734375Q2540.448694229126 -552.734375 2588.886095881462 -534.472718834877Q2637.323497533798 -516.211062669754 2672.723873257637 -480.76190054416656Q2708.124248981476 -445.3127384185791 2727.4602043628693 -393.4572637081146Q2746.7961597442627 -341.60178899765015 2746.7961597442627 -274.02353286743164V-230.85957765579224H2272.7735328674316V-331.24977350234985H2664.277194738388L2583.125500679016 -307.8122138977051Q2583.125500679016 -345.3124761581421 2571.894942522049 -371.97287380695343Q2560.664384365082 -398.63327145576477 2538.642718195915 -413.08654844760895Q2516.6210520267487 -427.5398254394531 2483.905940055847 -427.5398254394531Q2451.1908280849457 -427.5398254394531 2428.778513073921 -413.0377173423767Q2406.3661980628967 -398.5356092453003 2394.7449910640717 -372.4611848592758Q2383.1237840652466 -346.38676047325134 2383.1237840652466 -310.7420802116394V-238.672137260437Q2383.1237840652466 -200.48817992210388 2396.6004687547684 -172.75357246398926Q2410.07715344429 -145.01896500587463 2434.5890867710114 -130.0286203622818Q2459.1010200977325 -115.03827571868896 2491.523175239563 -115.03827571868896Q2514.0819239616394 -115.03827571868896 2532.5390833616257 -121.43480777740479Q2550.996242761612 -127.8313398361206 2564.2775881290436 -140.28261601924896Q2577.558933496475 -152.73389220237732 2584.2972683906555 -170.5074906349182L2743.47576379776 -165.8197045326233Q2733.5147845745087 -112.30427026748657 2700.3605353832245 -72.70479202270508Q2667.2062861919403 -33.105313777923584 2613.5931450128555 -11.474519968032837Q2559.9800038337708 10.15627384185791 2488.398222923279 10.15627384185791Z\" fill=\"currentColor\" transform=\"translate(60.92 936.00) scale(0.07500)\"/><path d=\"M2836.112608909607 -603.90625V-682.421875H2874.550166130066Q2882.0207619667053 -682.568359375 2888.231676220894 -679.5068502426147Q2894.4425904750824 -676.4453411102295 2898.1486612558365 -670.6592172384262Q2901.8547320365906 -664.8730933666229 2901.8547320365906 -656.638407248717Q2901.8547320365906 -648.2617437839508 2898.0021768808365 -642.3144727945328Q2894.1496217250824 -636.3672018051147 2887.806867957115 -633.3789169788361Q2881.464114189148 -630.3906321525574 2873.729839324951 -630.3906321525574H2847.3039650917053V-645.2147722244263H2869.3352723121643Q2873.8176548480988 -645.1561748981476 2877.0842903852463 -647.9927821518623Q2880.350925922394 -650.8293894055771 2880.350925922394 -656.6207958819115Q2880.350925922394 -662.4122023582458 2877.054991722107 -664.9317353963852Q2873.75905752182 -667.4512684345245 2869.4524669647217 -667.5391554832458H2856.561698913574V-603.90625ZM2886.3273525238037 -640.2344107627869 2904.37429189682 -603.90625H2881.8158411979675L2865.116515159607 -640.2344107627869ZM2866.87429189682 -557.03125Q2849.29616689682 -557.03125 2833.84206533432 -563.6962890625Q2818.38796377182 -570.361328125 2806.66921377182 -582.080078125Q2794.95046377182 -593.798828125 2788.3733117580414 -609.2529296875Q2781.7961597442627 -624.70703125 2781.7961597442627 -642.28515625Q2781.7961597442627 -659.86328125 2788.3733117580414 -675.3173828125Q2794.95046377182 -690.771484375 2806.66921377182 -702.490234375Q2818.38796377182 -714.208984375 2833.84206533432 -720.8740234375Q2849.29616689682 -727.5390625 2866.87429189682 -727.5390625Q2884.59890127182 -727.5390625 2900.05300283432 -720.8740234375Q2915.50710439682 -714.208984375 2927.22585439682 -702.490234375Q2938.94460439682 -690.771484375 2945.53640127182 -675.3173828125Q2952.12819814682 -659.86328125 2952.12819814682 -642.28515625Q2952.12819814682 -624.70703125 2945.55222094059 -609.2529296875Q2938.9762437343597 -593.798828125 2927.2856175899506 -582.080078125Q2915.5949914455414 -570.361328125 2900.11296192027 -563.6962890625Q2884.6309323949986 -557.03125 2866.87429189682 -557.03125ZM2866.87429189682 -579.6483516693115Q2884.3306229319046 -579.6483516693115 2898.5937226800834 -588.0700250156224Q2912.856822428262 -596.4916983619332 2921.3011451647462 -610.7165415771306Q2929.74546790123 -624.9413847923279 2929.686870574951 -642.28515625Q2929.74546790123 -659.6289277076721 2921.2911115586758 -673.8813729491085Q2912.8367552161217 -688.1338181905448 2898.5567079484463 -696.5718330349773Q2884.276660680771 -705.0098478794098 2866.87429189682 -704.9219608306885Q2849.6184074878693 -705.0098478794098 2835.365962246433 -696.5718330349773Q2821.1135170049965 -688.1338181905448 2812.675502160564 -673.8813729491085Q2804.2374873161316 -659.6289277076721 2804.2374873161316 -642.3120161120811Q2804.2374873161316 -624.9951045164901 2812.6896464824677 -610.7299437348762Q2821.1418056488037 -596.4647829532623 2835.371263444239 -588.0565673112869Q2849.6007212396744 -579.6483516693115 2866.87429189682 -579.6483516693115Z\" fill=\"currentColor\" transform=\"translate(60.92 936.00) scale(0.07500)\"/><path d=\"M528.359591960907 0.0V-94.12169456481934H197.4814534187317L355.26368021965027 -263.20260763168335Q386.65053248405457 -296.18123173713684 413.22775185108185 -327.42151618003845Q439.80497121810913 -358.66180062294006 459.4925045967102 -389.5016610622406Q478.6917567253113 -420.34152150154114 489.5755499601364 -451.9138038158417Q500.45934319496155 -483.4860861301422 500.45934319496155 -517.2068476676941Q500.45934319496155 -561.9530081748962 485.7083708047867 -599.3602722883224Q470.9573984146118 -636.7675364017487 443.1253671646118 -663.7011468410492Q415.01012444496155 -690.6347572803497 373.87728691101074 -705.6689411401749Q332.74444937705994 -720.703125 280.1857888698578 -720.703125Q224.3654429912567 -720.703125 179.37514185905457 -702.7001827955246Q134.38484072685242 -684.6972405910492 103.10548543930054 -653.7792384624481Q71.33784890174866 -622.861236333847 54.296791553497314 -581.6502571105957Q37.25573420524597 -540.4392778873444 37.25573420524597 -494.101345539093H154.41471338272095Q154.41471338272095 -524.7555673122406 162.25160658359528 -549.0621328353882Q170.0884997844696 -573.3686983585358 185.68414449691772 -590.1459753513336Q200.79150795936584 -606.4349710941315 223.7992286682129 -615.131214261055Q246.80694937705994 -623.8274574279785 277.63688564300537 -623.8274574279785Q302.1191656589508 -623.8274574279785 321.9139873981476 -615.6585663557053Q341.70880913734436 -607.489675283432 356.0446798801422 -592.9487347602844Q369.89226937294006 -578.1245827674866 377.4459511041641 -557.6217323541641Q384.9996328353882 -537.1188819408417 384.9996328353882 -512.167751789093Q384.9996328353882 -493.798702955246 379.7701448202133 -475.3759056329727Q374.54065680503845 -456.95310831069946 362.69497871398926 -436.1914396286011Q350.5660891532898 -414.9414896965027 330.98605275154114 -389.7852897644043Q311.4060163497925 -364.6290898323059 282.7049195766449 -333.07644724845886L51.49403214454651 -81.08446002006531V0.0ZM1128.457248210907 0.0V-94.12169456481934H797.5791096687317L955.3613364696503 -263.20260763168335Q986.7481887340546 -296.18123173713684 1013.3254081010818 -327.42151618003845Q1039.9026274681091 -358.66180062294006 1059.5901608467102 -389.5016610622406Q1078.7894129753113 -420.34152150154114 1089.6732062101364 -451.9138038158417Q1100.5569994449615 -483.4860861301422 1100.5569994449615 -517.2068476676941Q1100.5569994449615 -561.9530081748962 1085.8060270547867 -599.3602722883224Q1071.0550546646118 -636.7675364017487 1043.2230234146118 -663.7011468410492Q1015.1077806949615 -690.6347572803497 973.9749431610107 -705.6689411401749Q932.8421056270599 -720.703125 880.2834451198578 -720.703125Q824.4630992412567 -720.703125 779.4727981090546 -702.7001827955246Q734.4824969768524 -684.6972405910492 703.2031416893005 -653.7792384624481Q671.4355051517487 -622.861236333847 654.3944478034973 -581.6502571105957Q637.353390455246 -540.4392778873444 637.353390455246 -494.101345539093H754.512369632721Q754.512369632721 -524.7555673122406 762.3492628335953 -549.0621328353882Q770.1861560344696 -573.3686983585358 785.7818007469177 -590.1459753513336Q800.8891642093658 -606.4349710941315 823.8968849182129 -615.131214261055Q846.9046056270599 -623.8274574279785 877.7345418930054 -623.8274574279785Q902.2168219089508 -623.8274574279785 922.0116436481476 -615.6585663557053Q941.8064653873444 -607.489675283432 956.1423361301422 -592.9487347602844Q969.9899256229401 -578.1245827674866 977.5436073541641 -557.6217323541641Q985.0972890853882 -537.1188819408417 985.0972890853882 -512.167751789093Q985.0972890853882 -493.798702955246 979.8678010702133 -475.3759056329727Q974.6383130550385 -456.95310831069946 962.7926349639893 -436.1914396286011Q950.6637454032898 -414.9414896965027 931.0837090015411 -389.7852897644043Q911.5036725997925 -364.6290898323059 882.8025758266449 -333.07644724845886L651.5916883945465 -81.08446002006531V0.0ZM2012.4129354953766 -710.9375H1866.6111528873444V0.0H1976.5922725200653V-241.20968580245972L1970.117688179016 -546.8059480190277L2069.1990852355957 -218.99476647377014H2130.3028762340546L2239.5600378513336 -558.7591230869293L2233.0854535102844 -241.20968580245972V0.0H2343.0665731430054V-710.9375H2197.0597207546234L2100.09765625 -406.7300260066986ZM2490.732580423355 -710.9375V-613.6322617530823H2639.110952615738V-96.81695699691772H2490.732580423355V0.0H2909.658044576645V-96.81695699691772H2757.6566338539124V-613.6322617530823H2909.658044576645V-710.9375ZM3532.1777760982513 0.0V-710.9375H3413.964092731476L3413.0656719207764 -223.42899441719055L3183.35023522377 -710.9375H3064.6482706069946V0.0H3183.1451654434204L3183.7603747844696 -489.05149102211L3414.3254458904266 0.0Z\" fill=\"currentColor\" transform=\"translate(695.81 936.00) scale(0.06800)\"/>"};
+(function(){
+  const L = window.FRAME_LOGO, NS = "http://www.w3.org/2000/svg";
+  const tr = `translate(${L.tx} ${L.ty})`;
+  // small header wordmark
+  const small = document.getElementById('wmSmall');
+  small.innerHTML = L.letters.map(l=>`<path fill="currentColor" transform="${tr}" d="${l.d}"/>`).join('') + `<path fill="currentColor" transform="${tr}" d="${L.reg}"/>`;
+  // hero: each letter rises out of its own mask
+  const big = document.getElementById('logoAnim');
+  let defs = `<defs><clipPath id="cl"><rect x="-20" y="0" width="${L.w+60}" height="${L.h+4}"/></clipPath></defs>`;
+  let body = `<g clip-path="url(#cl)">` + L.letters.map((l,i)=>
+    `<g class="ltr" style="animation-delay:${(0.12+i*0.11).toFixed(2)}s"><path fill="currentColor" transform="${tr}" d="${l.d}"/></g>`).join('') + `</g>`;
+  body += `<g class="reg"><path fill="currentColor" transform="${tr}" d="${L.reg}"/></g>`;
+  big.innerHTML = defs + body;
+  big.addEventListener('click', ()=>{ big.classList.add('replay'); void big.getBoundingClientRect(); big.classList.remove('replay'); });
+  // symbol
+  const symSvg = `<svg viewBox="0 0 1000 1000" aria-hidden="true">${L.sym}</svg>`;
+  const cell = document.getElementById('cell');
+  cell.innerHTML = symSvg.replace(/<rect[^>]*\/>/,'');
+  document.getElementById('symClose').innerHTML = symSvg;
+
+  // film strip: all frames, doubled for a seamless loop
+  const names = ['nuc_1','rosa_1','farm_1','joao_2','nuc_4','rosa_4','farm_3','joao_5','nuc_3','rosa_2','farm_5','joao_6','nuc_6','rosa_5','farm_2','joao_3','nuc_5','rosa_6','farm_4','joao_1'];
+  const reel = document.getElementById('reel');
+  const html = names.map(n=>`<img src="media/${n}.jpg" alt="" loading="lazy">`).join('');
+  reel.innerHTML = html + html;
+
+  // timecode at 24 fps
+  const tcEl = document.getElementById('tc'); const t0 = performance.now();
+  const pad = n=>String(n).padStart(2,'0');
+  (function tick(){ const f = Math.floor((performance.now()-t0)/1000*24);
+    tcEl.textContent = `${pad(Math.floor(f/86400))}:${pad(Math.floor(f/1440)%60)}:${pad(Math.floor(f/24)%60)}:${pad(f%24)}`;
+    requestAnimationFrame(tick); })();
+
+  // frames that seek the video
+  const fmt = s=>{ s=Math.floor(s); return `00:${pad(Math.floor(s/60))}:${pad(s%60)}`; };
+  document.querySelectorAll('.case').forEach(c=>{
+    const v = c.querySelector('video'), scr = c.querySelector('.screen'), box = c.querySelector('.frames');
+    const list = JSON.parse(box.dataset.frames);
+    box.innerHTML = list.map(([n,t])=>`<button type="button" data-t="${t}" aria-label="Ir para ${fmt(t)}"><img src="media/${n}.jpg" alt="Frame em ${fmt(t)}" loading="lazy"><span>${fmt(t)}</span></button>`).join('');
+    const btns = [...box.querySelectorAll('button')];
+    btns.forEach(b=>b.addEventListener('click', ()=>{
+      v.currentTime = parseFloat(b.dataset.t);
+      document.querySelectorAll('video').forEach(o=>{ if(o!==v) o.pause(); });
+      v.play().catch(()=>{});
+      if (scr.getBoundingClientRect().top < 0 || scr.getBoundingClientRect().bottom > innerHeight) scr.scrollIntoView({behavior:'smooth', block:'center'});
+    }));
+    v.addEventListener('play', ()=>{ scr.classList.add('playing'); document.querySelectorAll('video').forEach(o=>{ if(o!==v) o.pause(); }); });
+    v.addEventListener('pause', ()=>scr.classList.remove('playing'));
+    v.addEventListener('timeupdate', ()=>{
+      let idx=-1; list.forEach(([,t],i)=>{ if (v.currentTime >= t-0.05) idx=i; });
+      btns.forEach((b,i)=>b.classList.toggle('on', i===idx && !v.paused));
+    });
+  });
+
+  // copy buttons
+  document.querySelectorAll(".copybtn").forEach(b=>b.addEventListener('click', ()=>{
+    const el = document.getElementById(b.dataset.copy), txt = el.textContent;
+    const done = ()=>{ b.textContent='Copiado'; setTimeout(()=>b.textContent='Copiar',1600); };
+    try { navigator.clipboard.writeText(txt).then(done, ()=>{ selectEl(el); }); } catch(e){ selectEl(el); }
+  }));
+  function selectEl(el){ const r=document.createRange(); r.selectNodeContents(el); const s=getSelection(); s.removeAllRanges(); s.addRange(r); }
+})();
+</script>
+
+</body>
+</html>
